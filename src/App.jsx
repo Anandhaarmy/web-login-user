@@ -1,27 +1,28 @@
 import React from 'react';
-import './index.css';
-import PaymentConfirmationForm from './components/PaymentConfirmation';
+import Navbar from './components/Navbar';
+import ContactCS from './components/ContactCS';
+import AddKostForm from './components/AddKost';
 
-function App() {
+const App = () => {
   return (
-    <div className="min-h-screen bg-gray-100">
-      <header className="bg-blue-100 p-4 flex justify-between items-center">
-        <img src="logo.png" className="h-10" alt="logo" />
-        <nav>
-          <a href="#" className="mx-2 text-gray-700">Beranda</a>
-          <a href="#" className="mx-2 text-gray-700">Kost Saya</a>
-          <a href="#" className="mx-2 text-gray-700">Tentang Kami</a>
-          <div className="inline-block ml-4">
-            <img src="profile-pic-url.jpg" alt="profile" className="h-10 w-10 rounded-full" />
-          </div>
-        </nav>
-      </header>
-      <main>
-        <PaymentConfirmationForm />
-        {/* Konten lainnya bisa tetap di sini */}
-      </main>
+    <div className="bg-blue-100 min-h-screen py-10 px-10">
+      <Navbar />
+
+      <div className="mt-10">
+        <h1 className="text-3xl font-bold">KostCozy</h1>
+      </div>
+
+      <div className="mt-20 flex justify-center">
+        <div className="max-w-md space-y-6">
+          <ContactCS />
+        </div>
+
+        <div className="max-w-md ml-6 space-y-6">
+          <AddKostForm />
+        </div>
+      </div>
     </div>
   );
-}
+};
 
 export default App;
